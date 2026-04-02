@@ -1,5 +1,5 @@
 {
-  "name": "files-upload-mcp",
+  "name": "sharepoint-document-upload-mcp",
   "version": "1.0.0",
   "description": "",
   "main": "dist/server.js",

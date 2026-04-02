@@ -35,6 +35,7 @@ import {
   MICROSOFT_GRAPH_CONFLICT_BEHAVIOR_FAIL,
   MICROSOFT_TOKEN_CACHE_DEFAULT_NAME,
   SHAREPOINT_DEFAULT_DOCUMENT_LIBRARY_NAME,
+  MICROSOFT_REDIRECT_URI,
 } from "./constants.ts";
 import {
   encodeDriveRelativePath,
@@ -151,7 +152,7 @@ function resolveSiteConfig(
     tenantId: pick(overrides?.MICROSOFT_TENANT_ID, "MICROSOFT_TENANT_ID"),
     clientId: pick(overrides?.MICROSOFT_CLIENT_ID, "MICROSOFT_CLIENT_ID"),
     redirectUri:
-      pick(undefined, "MICROSOFT_REDIRECT_URI") ?? ENTRA_DEFAULT_REDIRECT_URI,
+      pick(undefined, "MICROSOFT_REDIRECT_URI") ?? MICROSOFT_REDIRECT_URI,
     siteHost,
     sitePath: normalizeSitePath(rawPath),
     folderPath:

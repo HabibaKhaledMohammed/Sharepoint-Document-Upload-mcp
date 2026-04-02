@@ -3,7 +3,8 @@
 /* Microsoft Graph */
 export const GRAPH_V1_BASE_URL = "https://graph.microsoft.com/v1.0" as const;
 export const GRAPH_BETA_BASE_URL = "https://graph.microsoft.com/beta" as const;
-
+export const MICROSOFT_AUTH_MODE="interactive" as const;
+export const MICROSOFT_REDIRECT_URI="http://localhost" as const;
 /** Delegated scopes requested for interactive SharePoint upload. */
 export const GRAPH_DELEGATED_SCOPES = [
   "https://graph.microsoft.com/Sites.Read.All",
@@ -53,9 +54,6 @@ export const ALLOWED_UPLOAD_EXTENSIONS = [
 ] as const;
 
 export const LOCAL_UPLOAD_DIR = "uploads" as const;
-export const TEXT_CHUNK_SIZE_CHARS = 500;
-export const TEXT_CHUNK_OVERLAP_CHARS = 50;
-export const FAKE_EMBEDDING_DIMENSION = 10;
 
 /** Prefix length from SHA-256 hex used in SharePoint upload filenames. */
 export const SHAREPOINT_FILENAME_HASH_PREFIX_LENGTH = 12;
@@ -94,12 +92,8 @@ export const SCHEMA_DESC_SHAREPOINT_UPLOAD_BASE_PATH =
 
 /* Server messages */
 export const ERR_UNSUPPORTED_FILE_TYPE = "Unsupported file type" as const;
-export const MSG_DOCUMENT_ALREADY_PROCESSED =
-  "Document already processed (duplicate detected)." as const;
-export const MSG_UPLOAD_SUCCESS_TEMPLATE = (
-  chunkCount: number,
-  sharePointNote: string
-) => `Upload successful. Processed ${chunkCount} chunks.${sharePointNote}`;
+export const MSG_UPLOAD_SUCCESS_TEMPLATE = (sharePointNote: string) =>
+  `Upload successful.${sharePointNote}`;
 /** Appended when Graph returns a browser URL for the uploaded item. */
 export const MSG_SHAREPOINT_DOC_URL_LINE = (url: string) =>
   `\n\nSharePoint document URL:\n${url}` as const;
@@ -113,10 +107,6 @@ export const MSG_SHAREPOINT_LIST_ITEM_UNIQUE_ID_LINE = (id: string) =>
   `\n\nSharePoint list item unique id:\n${id}` as const;
 export const SP_RESULT_NOTE_COMPLETED =
   "\n\nSharePoint upload completed (no document URL or ids in API response)." as const;
-
-export const MOCK_PARSED_PDF_CONTENT = "parsed pdf content (mock)" as const;
-export const MOCK_PARSED_DOCX_CONTENT = "parsed docx content (mock)" as const;
-export const ERR_UNSUPPORTED_FORMAT = "Unsupported format" as const;
 
 /* SharePoint / Graph runtime errors (user-facing) */
 export const ERR_INTERACTIVE_NO_GRAPH_TOKEN =

@@ -1,33 +1,56 @@
 {
   "name": "sharepoint-document-upload-mcp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/server.js",
+  "version": "1.1.2",
+  "description": "Model Context Protocol (MCP) server for uploading documents to SharePoint via Microsoft Graph",
+  "main": "src/server.ts",
+  "bin": {
+    "sharepoint-document-upload-mcp": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/**/*.mjs",
+    "src/**/*.ts",
+    "tsconfig.json"
+  ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "tsx src/server.ts",
     "dev": "tsx src/server.ts",
     "test:mcp": "tsx scripts/run-mcp-upload-test.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HabibaKhaledMohammed/Sharepoint-Document-Upload-mcp.git"
+    "url": "git+https://github.com/HabibaKhaledMohammed/Sharepoint-Document-Upload-mcp.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "sharepoint",
+    "microsoft-graph",
+    "upload",
+    "azure"
+  ],
+  "author": "Habiba Khaled Mohammed <habibakhaled606@gmail.com>",
   "license": "ISC",
   "type": "module",
+  "engines": {
+    "node": ">=18.18.0"
+  },
   "dependencies": {
     "@azure/identity": "^4.13.1",
     "@azure/identity-cache-persistence": "^1.2.0",
     "@modelcontextprotocol/sdk": "^1.29.0",
     "dotenv": "^17.3.1",
+    "tsx": "^4.19.2",
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/node": "^22.10.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "@babel/core": "^7.29.0",
+    "@types/node": "^22.19.17",
+    "babel-loader": "^10.1.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^7.0.2"
   }
 }

@@ -1,4 +1,4 @@
 node_modules/
-src/
 .env
-tsconfig.json
+*.log
+.DS_Store

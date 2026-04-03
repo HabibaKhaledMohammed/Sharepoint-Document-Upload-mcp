@@ -23,8 +23,8 @@ import {
   TOOL_UPLOAD_DOCUMENT_DESCRIPTION,
   TOOL_UPLOAD_DOCUMENT_TITLE,
   TOOL_HELLO_WORLD_DESCRIPTION
-} from "./constants.ts";
-import { uploadDocument } from "./document-upload.ts";
+} from "./constants.js";
+import { uploadDocument } from "./document-upload.js";
 
 const server = new McpServer({
   name: MCP_SERVER_NAME,

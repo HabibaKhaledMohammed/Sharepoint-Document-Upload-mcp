@@ -6,7 +6,7 @@ import {
   GRAPH_BETA_BASE_URL,
   GRAPH_V1_BASE_URL,
   HTTP_CONTENT_TYPE_OCTET_STREAM,
-} from "./constants.ts";
+} from "./constants.js";
 
 export const GRAPH_V1_ROOT = GRAPH_V1_BASE_URL;
 export const GRAPH_BETA_ROOT = GRAPH_BETA_BASE_URL;

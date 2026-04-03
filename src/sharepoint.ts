@@ -36,7 +36,7 @@ import {
   MICROSOFT_TOKEN_CACHE_DEFAULT_NAME,
   SHAREPOINT_DEFAULT_DOCUMENT_LIBRARY_NAME,
   MICROSOFT_REDIRECT_URI,
-} from "./constants.ts";
+} from "./constants.js";
 import {
   encodeDriveRelativePath,
   type GraphDriveItemSummary,
@@ -44,7 +44,7 @@ import {
   graphGetJson,
   graphPutStream,
   graphRequest,
-} from "./graph-client.ts";
+} from "./graph-client.js";
 
 /** Re-export for callers that imported redirect from this module. */
 export const DEFAULT_REDIRECT_URI = ENTRA_DEFAULT_REDIRECT_URI;

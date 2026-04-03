@@ -10,8 +10,6 @@
     "declaration": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
     "allowJs": true,
     "checkJs": true,
     "noImplicitAny": true,

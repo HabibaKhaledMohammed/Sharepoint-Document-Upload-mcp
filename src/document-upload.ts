@@ -9,8 +9,8 @@ import {
     MSG_SHAREPOINT_LIST_ITEM_UNIQUE_ID_LINE,
     SHAREPOINT_FILENAME_HASH_PREFIX_LENGTH,
     SP_RESULT_NOTE_COMPLETED,
-  } from "./constants.ts";
-import { uploadBufferToSharePointIfConfigured } from "./sharepoint.ts";
+  } from "./constants.js";
+import { uploadBufferToSharePointIfConfigured } from "./sharepoint.js";
 import path from "node:path";
 import fs from "node:fs/promises";
 import crypto from "node:crypto";

@@ -1,12 +1,9 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import dotenv from "dotenv";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __serverDir = path.dirname(fileURLToPath(import.meta.url));
-dotenv.config({ path: path.join(__serverDir, "..", ".env") });
 import {
   MCP_SERVER_DESCRIPTION,
   MCP_SERVER_NAME,

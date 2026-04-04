@@ -2,12 +2,13 @@
   "name": "@habibakhaledm/sharepoint-document-upload-mcp",
   "version": "1.1.3",
   "description": "A MCP server for uploading document to Sharepoint",
-  "main": "src/server.ts",
+  "main": "dist/src/server.js",
   "bin": {
-    "sharepoint-document-upload-mcp": "dist/server.js"
+    "sharepoint-document-upload-mcp": "dist/src/server.js"
   },
   "files": [
-    "bin/**/*.mjs",
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
     "src/**/*.ts",
     "tsconfig.json"
   ],
